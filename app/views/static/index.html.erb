@@ -1,3 +1,7 @@
 <h1>Liste des potins du moment</h1>
-<p>  <%Gossip.all.each do  |gossip|%> </p>
- <p>  <% end %>  </p> 
+<% Gossip.all.each do |gossip| %> 
+
+<%= gossip.content %> <br><br><br>
+<a><%= link_to "lien", gossip_id_path(gossip.id)%></a>
+
+   <% end %>  
