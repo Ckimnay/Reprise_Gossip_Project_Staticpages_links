@@ -27,12 +27,16 @@ end
 20.times do |index|
     JoinTableTagGossip.create(gossip: Gossip.find(index +1), tag: Tag.find(rand(1..10)))
 end
+
+
 # Create 10 private messages
-10.times do
-    PrivateMessage.create(content: Faker::GreekPhilosophers.quote, sender: User.find(rand(1..10)))
-end
+#10.times do
+#    PrivateMessage.create(content: Faker::GreekPhilosophers.quote, sender: User.find(rand(1..10)))
+#end
+
 # Create recipients for private messages
-20.times do |index|
-    JoinTablePrivateMessageUser.create(received_message: PrivateMessage.find((index%10) + 1), user: User.find(rand(1..10)))
-end
-tp Gossip.all
+
+
+#20.times do |index|
+#    JoinTablePrivateMessageUser.create(received_message: PrivateMessage.find((index%10) + 1), user: User.find(rand(1..10)))
+#end
