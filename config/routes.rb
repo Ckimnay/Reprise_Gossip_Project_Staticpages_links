@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static#contact'
   get '/welcome/:first_name', to: 'dynamic#welcome'
   get '/gossip/:gossip_id', to: 'dynamic#gossip', as: 'gossip_id'
-  get 'user/:user_id', to: 'dynamic#user', as: 'user_id'
+  get 'user/:user_id', to: 'dynamic#user'
   end

@@ -5,4 +5,8 @@ class DynamicController < ApplicationController
         @gossip = Gossip.all  
     end
 
+    def user
+        @user = User.find(params[:user_id])
+    
+    end
 end
